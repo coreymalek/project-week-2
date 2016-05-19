@@ -3,7 +3,7 @@
 
   <head>
     <title>Campfire Coffee, Tuesday version</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
   </head>
 
   <body>
@@ -13,29 +13,30 @@
 
     <h1>Barista Hours Needed By Location Each Day</h1>
     <table id="baristas-table"></table>
+<form id="new-shop-form">
+  <fieldset>
+    <legend> Submit New Location </legend>
 
-    <script src="app2.js"></script>
-</body>
-<fieldset>
-<legend> Submit New Location </legend>
+      <label for="location"> New Location</label>
+      <input name="location" type="text"/>
 
-<label for="location"> New Location</label>
-<input name="location" type="text"/>
+      <label for="min"> Min Cust/Hour</label>
+      <input name="min" type="text" />
 
-<label for="min"> Min Cust/Hour</label>
-<input for="min" type="text" />
+      <label for="max"> Max Cust/Hour</label>
+      <input name="max" type="text" />
 
-<label for="max"> Max Cust/Hour</label>
-<input for="max" type="text" />
+      <label for="avgCups"> Avg Cups/Cust</label>
+      <input name="avgCups" type="text" />
 
-<label for="avgCups"> Avg Cups/Cust</label>
-<input for="avgCups" type="text" />
+      <label for="avgPounds"> Avg lbs/Cust</label>
+      <input name="avgPounds" type="text" />
 
-<label for="avgPounds"> Avg lbs/Cust</label>
-<input for="avgPounds" type="text" />
+      <button type="submit"> SUBMIT </button>
+    </fieldset>
+  </form>
 
-<button type="submit"> SUBMIT </button>
-</fieldset>
-
+<script src="app2.js"></script>
 <script src="app3.js"></script>
+</body>
 </html>
