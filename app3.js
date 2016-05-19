@@ -1,32 +1,29 @@
-var locationName = function(location, text) {
-  this.location = location;
-  this.text = text;
-};
 
-locationName.prototype.render = function() {
-  
+
+var form = document.getElementById('new-shop-form');
+form.addEventListener('submit',handleEntrySubmit);
+
+function handleEntrySubmit(event) {
+  event.preventDefault();
+  console.log(event);
+  console.log(event.target.location.value);
+  var location = event.target.location.value;
+  var min = parseFloat(event.target.min.value);
+  var max = parseFloat(event.target.max.value);
+  var avgCups = parseFloat(event.target.avgCups.value);
+  var avgPounds = parseFloat(event.target.avgPounds.value);
+
+  var newShop = new Shops(location, min, max, avgCups, avgPounds);
+  newShop.allCalcs();
+  console.log(newShop);
+  makeSecondRow(newShop);
+  makeSecondRow2(newShop);
+  event.target.location.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avgCups.value = null;
+  event.target.avgPounds.value = null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-var locationName = document.getElementById('location');
-var minCustomersHour = document.getElementById('min');
-var maxCustomersHour = document.getElementById('max');
-var avgCupsPerCustomer = document.getElementById('avg-cups-cust');
-var avgPoundsPerCustomer = document.getElementById('avg-pounds-cust');
-var allEntries = [];
-
-
-
 
 
 

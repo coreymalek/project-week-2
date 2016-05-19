@@ -128,9 +128,9 @@ function makeSecondRow(store) {
   console.log('row 2 created');
 
 
-  var pikePlace = document.createElement('th');//create daily location total cell
-  pikePlace.textContent = store.locationName;   //give text content to daily location cell
-  row2.appendChild(pikePlace);//append cell to row
+  var shopNameCell = document.createElement('th');//create daily location total cell
+  shopNameCell.textContent = store.locationName;   //give text content to daily location cell
+  row2.appendChild(shopNameCell);//append cell to row
   console.log('pike place appended');
 
   var totalBeans = document.createElement('td');
@@ -188,9 +188,9 @@ function makeSecondRow2(store) {
   console.log('row 2 created');
 
 
-  var pikePlace = document.createElement('th');//create daily location total cell
-  pikePlace.textContent = store.locationName;   //give text content to daily location cell
-  row2.appendChild(pikePlace);//append cell to row
+  var shopNameCell = document.createElement('th');//create daily location total cell
+  shopNameCell.textContent = store.locationName;   //give text content to daily location cell
+  row2.appendChild(shopNameCell);//append cell to row
   console.log('pike place appended');
 
   var baristasTotal = document.createElement('td');
@@ -210,6 +210,9 @@ makeSecondRow2(capitolHill);
 makeSecondRow2(spl);
 makeSecondRow2(slu);
 makeSecondRow2(seatac);
+
+
+
 
 // function makeSecondRow() {
 //   var row2 = document.createElement('tr');
