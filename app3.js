@@ -18,13 +18,12 @@ function handleEntrySubmit(event) {
   console.log(newShop);
   makeSecondRow(newShop);
   makeSecondRow2(newShop);
-  event.target.location.value = null;
-  event.target.min.value = null;
-  event.target.max.value = null;
-  event.target.avgCups.value = null;
-  event.target.avgPounds.value = null;
+  event.target.location.value = '';
+  event.target.min.value = '';
+  event.target.max.value = '';
+  event.target.avgCups.value = '';
+  event.target.avgPounds.value = '';
 }
-
 
 
 
